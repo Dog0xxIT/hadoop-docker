@@ -1,0 +1,34 @@
+<configuration>
+
+    <!-- Server Certificate Store -->
+    <property>
+        <name>ssl.server.keystore.type</name>
+        <value>jks</value>
+    </property>
+    <property>
+        <name>ssl.server.keystore.location</name>
+        <value>/ssl-conf/keystore.jks</value>
+    </property>
+    <property>
+        <name>ssl.server.keystore.password</name>
+        <value>123456</value>
+    </property>
+
+    <!-- Server Trust Store -->
+    <property>
+        <name>ssl.server.truststore.type</name>
+        <value>jks</value>
+    </property>
+    <property>
+        <name>ssl.server.truststore.location</name>
+        <value>/ssl-conf/truststore.jks</value>
+    </property>
+    <property>
+        <name>ssl.server.truststore.password</name>
+        <value>123456</value>
+    </property>
+    <property>
+        <name>ssl.server.truststore.reload.interval</name>
+        <value>10000</value>
+    </property>
+</configuration>

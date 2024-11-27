@@ -1,0 +1,31 @@
+1. Build image (chỉ cần làm 1 lần)
+    $cd ./builds/hadoop
+    $docker build -t hadoop:1 . 
+    $cd ..
+    $cd ./builds/kerberos
+    $docker build -t kerberos:1 . 
+    $cd ../..
+    $docker network create --subnet=10.5.0.0/24 example.com (nếu network đã tồn tại thì k cần tạo)
+
+2. Run container
+    - $docker-compose up -d
+    - $docker exec -it  kdc-server bash
+    - bash> /shared/init-keytab.sh
+    - bash> exit
+
+    - $docker exec -it slave1 bash
+    - bash> kinit -kt /shared/keytabs/hadoop.keytab  hadoop/cluster@EXAMPLE.COM
+    - bash> exit
+
+    - $docker exec -it master bash
+    - bash> kinit -kt /shared/keytabs/hadoop.keytab  hadoop/cluster@EXAMPLE.COM
+    - bash> start-hbase.sh
+    - bash> hbase shell (chạy được trên slave1 và master)
+
+3. Dừng docker
+    - docker-compose down
+
+* Lưu ý mỗi lần chạy lại thì làm bước 2
+* Chỉnh config trong thư mục configs rồi chạy lại bước 2
+* Để backup dữ liệu từ hdfs về máy local: master> hdfs dfs -copyToLocal / /shared/dfs
+* Để Load backup dữ liệu từ máy local lên hdfs: master> hdfs dfs -put /shared/dfs/* /

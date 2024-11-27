@@ -1,0 +1,35 @@
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://master</value>
+    </property>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:8020</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/tmp</value>
+    </property>
+    <property>
+        <name>hadoop.security.authentication</name>
+        <value>kerberos</value>
+    </property>
+    <property>
+        <name>hadoop.security.authorization</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hadoop.rpc.protection</name>
+        <value>authentication</value>
+    </property>
+    <!-- <property>
+        <name>hadoop.security.auth_to_local</name>
+        <value>RULE:[1:$1@$0](.*)s/.*//</value>
+    </property>
+
+    <property>
+        <name>hadoop.security.auth_to_local.mechanism</name>
+        <value>MIT</value>
+    </property> -->
+</configuration>

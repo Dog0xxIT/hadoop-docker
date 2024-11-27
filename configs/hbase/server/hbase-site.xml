@@ -1,0 +1,149 @@
+<configuration>
+  <!-- <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://master:8020/hbase</value>
+  </property> -->
+  <property>
+    <name>hbase.rootdir</name>
+    <value>file:///shared/dfs/hbase</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>/zookeeper</value>
+  </property>
+  <property>
+    <name>hbase.tmp.dir</name>
+    <value>./tmp</value>
+  </property>
+  <property>
+    <name>hbase.unsafe.stream.capability.enforce</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>zoo</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.clientPort</name>
+    <value>2181</value>
+  </property>
+  <property>
+    <name>zookeeper.znode.parent</name>
+    <value>/hbase</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.kerberos.principal</name>
+    <value>hadoop/cluster@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.keytab.file</name>
+    <value>/shared/keytabs/hadoop.keytab</value>
+  </property>
+  <property>
+    <name>hbase.master.kerberos.principal</name>
+    <value>hadoop/cluster@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>hbase.master.keytab.file</name>
+    <value>/shared/keytabs/hadoop.keytab</value>
+  </property>
+
+  <!-- 59.1. Using Secure HTTP (HTTPS) for the Web UI -->
+  <property>
+    <name>hbase.ssl.enabled</name>
+    <value>true</value>
+  </property>
+
+  <!-- 59.2. Disable cache in HBase UI -->
+  <property>
+    <name>hbase.http.filter.no-store.enable</name>
+    <value>true</value>
+  </property>
+
+  <!-- 59.3. Using SPNEGO for Kerberos authentication with Web UIs
+  <property>
+    <name>hbase.security.authentication.ui</name>
+    <value>kerberos</value>
+    <description>Controls what kind of authentication should be used for the HBase web UIs.</description>
+  </property>
+  <property>
+    <name>hbase.security.authentication</name>
+    <value>/shared/keytabs/hadoop.keytab</value>
+    <description>The Kerberos keytab file to use for SPNEGO authentication by the web server.</description>
+  </property>
+  <property>
+    <name>hbase.security.authentication.spnego.kerberos.principal</name>
+    <value>hadoop/cluster@EXAMPLE.COM</value>
+    <description>Required for SPNEGO, the Kerberos principal to use for SPNEGO authentication by the
+  web server. The _HOST keyword will be automatically substituted with the node's
+  hostname.</description>
+  </property>
+  <property>
+    <name>hbase.security.authentication.spnego.kerberos.keytab</name>
+    <value>/shared/keytabs/hadoop.keytab</value>
+    <description>Required for SPNEGO, the Kerberos keytab file to use for SPNEGO authentication by the
+  web server.</description>
+  </property> -->
+
+  <!--59.4. Defining administrators of the Web UI -->
+  <property>
+    <name>hbase.security.authentication.spnego.admin.users</name>
+    <value>hadoop</value>
+  </property>
+  <property>
+    <name>hbase.security.authentication.spnego.admin.groups</name>
+    <value>users</value>
+  </property>
+
+  <!-- 59.6. Other UI security-related configuration -->
+  <property>
+    <name>hbase.security.authentication.ui.config.protected</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.ui.show-stack-traces</name>
+    <value>false</value>
+  </property>
+
+  <!-- 62.1. Server side configuration -->
+  <property>
+    <name>hbase.server.netty.tls.enabled</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.rpc.tls.keystore.location</name>
+    <value>/ssl-conf/keystore.jks</value>
+  </property>
+  <property>
+    <name>hbase.rpc.tls.keystore.password</name>
+    <value>123456</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.enabledProtocols</name>
+    <value>TLSv1.2,TLSv1.3</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.protocol</name>
+    <value>TLSv1.2</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.ciphersuites</name>
+    <value>TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.clr</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.ocsp</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hbase.client.netty.tls.handshaketimeout</name>
+    <value>5000</value>
+  </property>
+</configuration>

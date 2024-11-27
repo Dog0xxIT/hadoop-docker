@@ -1,0 +1,103 @@
+services:
+    master:
+        image: hadoop:1
+        hostname: master
+        volumes:
+            - ./configs/hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+            - ./configs/hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
+            - ./configs/hadoop/mapred-site.xml:/opt/hadoop/etc/hadoop/mapred-site.xml
+            - ./configs/hadoop/yarn-site.xml:/opt/hadoop/etc/hadoop/yarn-site.xml
+            - ./configs/hadoop/capacity-scheduler.xml:/opt/hadoop/etc/hadoop/capacity-scheduler.xml
+            - ./configs/hadoop/ssl-server.xml:/opt/hadoop/etc/hadoop/ssl-server.xml
+            - ./configs/hadoop/ssl-client.xml:/opt/hadoop/etc/hadoop/ssl-client.xml
+            - ./configs/hbase/server/core-site.xml:/opt/hbase/conf/core-site.xml
+            - ./configs/hbase/server/hdfs-site.xml:/opt/hbase/conf/hdfs-site.xml
+            - ./configs/hbase/server/hbase-site.xml:/opt/hbase/conf/hbase-site.xml
+            - ./configs/hbase/server/ssl-server.xml:/opt/hbase/conf/ssl-server.xml
+            - ./configs/hbase/server/ssl-client.xml:/opt/hbase/conf/hbase-client.xml
+            - ./shared/hbase-logs/server:/opt/hbase/logs
+            - ./shared/keytabs:/shared/keytabs
+            - ./shared/dfs:/shared/dfs
+        # command: ['hdfs', 'namenode']
+        command:
+            - bash
+            - -c
+            - |
+                yarn resourcemanager > /dev/null 2>&1 &
+                yarn nodemanager > /dev/null 2>&1 &
+                /opt/hadoop/sbin/mr-jobhistory-daemon.sh --config /opt/hadoop/etc/hadoop start historyserver
+                hdfs namenode
+        ports:
+            - 9870:9870 # node http manager UI
+            - 9871:9871 # node https manager UI
+            - 16010:16010 # hbase web UI
+            - 16030:16030 # region UI
+            - 16000:16000 # port hbase
+            - 19888:19888 # jobhistory.webapp.address
+            - 8088:8088 # yarn.resourcemanager.webapp.address
+            - 8042:8042 # yarn.nodemanager.webapp.address
+        container_name: master
+        # docker exec -it namenode /bin/bash
+        domainname: example.com
+        tty: true
+        networks:
+            example.com:
+                ipv4_address: 10.5.0.2
+        restart: always
+    slave1:
+        image: hadoop:1
+        command: ['hdfs', 'datanode']
+        volumes:
+            - ./configs/hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+            - ./configs/hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
+            - ./configs/hadoop/mapred-site.xml:/opt/hadoop/etc/hadoop/mapred-site.xml
+            - ./configs/hadoop/yarn-site.xml:/opt/hadoop/etc/hadoop/yarn-site.xml
+            - ./configs/hadoop/capacity-scheduler.xml:/opt/hadoop/etc/hadoop/capacity-scheduler.xml
+            - ./configs/hadoop/ssl-server.xml:/opt/hadoop/etc/hadoop/ssl-server.xml
+            - ./configs/hadoop/ssl-client.xml:/opt/hadoop/etc/hadoop/ssl-client.xml
+            - ./configs/hbase/client/core-site.xml:/opt/hbase/conf/core-site.xml
+            - ./configs/hbase/client/hdfs-site.xml:/opt/hbase/conf/hdfs-site.xml
+            - ./configs/hbase/client/hbase-site.xml:/opt/hbase/conf/hbase-site.xml
+            - ./shared/hbase-logs/client:/opt/hbase/logs
+            - ./shared/keytabs:/shared/keytabs
+            - ./shared/dfs:/shared/dfs
+        container_name: slave1
+        hostname: slave1
+        domainname: example.com
+        tty: true
+        networks:
+            example.com:
+                ipv4_address: 10.5.0.4
+        restart: always
+    zoo:
+        image: zookeeper:3.4.10
+        container_name: zoo
+        environment:
+            ZOO_MY_ID: 1
+            ZOO_SERVERS: server.1=0.0.0.0:2888:3888
+            KRB5CCNAME: '/tmp/krb5cc'
+        ports:
+            - 2181:2181
+        restart: always
+        domainname: example.com
+        networks:
+            example.com:
+                ipv4_address: 10.5.0.8
+    kdc-server:
+        image: kerberos:1
+        container_name: kdc-server
+        hostname: kdc-server
+        domainname: example.com
+        command: /usr/sbin/krb5kdc -n
+        tty: true
+        volumes:
+            - ./shared/init-keytab.sh:/shared/init-keytab.sh
+            - ./shared/kerberos-logs:/var/log/kerberos
+            - ./shared/keytabs:/shared/keytabs
+        networks:
+            example.com:
+                ipv4_address: 10.5.0.7
+networks:
+    example.com:
+        external: true
+        driver: bridge

@@ -1,0 +1,85 @@
+otp: Loaded
+Nov 20 04:58:41 kdc-server krb5kdc[14](info): setting up network...
+krb5kdc: setsockopt(10,IPV6_V6ONLY,1) worked
+krb5kdc: setsockopt(12,IPV6_V6ONLY,1) worked
+Nov 20 04:58:41 kdc-server krb5kdc[14](info): set up 4 sockets
+Nov 20 04:58:41 kdc-server krb5kdc[14](info): commencing operation
+Nov 20 04:58:42 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:42 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:44 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:44 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:46 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:46 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:48 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:48 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:50 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:51 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:53 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:54 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:58 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:58:58 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 04:59:06 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:06 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078746, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:07 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:07 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078747, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:08 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:08 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078748, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:10 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:11 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:11 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078751, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:14 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078748, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 04:59:15 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:15 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078755, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:17 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 04:59:34 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:34 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078774, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 04:59:35 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 04:59:35 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078775, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:00:08 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:00:20 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:01:14 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078750, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+otp: Loaded
+Nov 20 05:01:38 kdc-server krb5kdc[14](info): setting up network...
+krb5kdc: setsockopt(10,IPV6_V6ONLY,1) worked
+krb5kdc: setsockopt(12,IPV6_V6ONLY,1) worked
+Nov 20 05:01:38 kdc-server krb5kdc[14](info): set up 4 sockets
+Nov 20 05:01:38 kdc-server krb5kdc[14](info): commencing operation
+Nov 20 05:01:39 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 05:01:39 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 05:01:24 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 05:01:42 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 05:01:43 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: CLIENT_NOT_FOUND: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Client not found in Kerberos database
+Nov 20 05:01:44 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:44 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078904, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:45 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:45 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078905, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:46 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:46 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078906, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:47 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:47 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078907, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:48 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:48 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078908, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:49 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:49 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078909, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:51 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:51 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:01:54 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078908, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:01:55 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078907, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:01:56 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:01:56 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.4: ISSUE: authtime 1732078916, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:02:40 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:03:02 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:03:33 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:03:47 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:04:03 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:04:20 kdc-server krb5kdc[14](info): TGS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732078911, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for hadoop/cluster@EXAMPLE.COM
+Nov 20 05:04:41 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:04:41 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732079081, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:04:42 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: NEEDED_PREAUTH: hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM, Additional pre-authentication required
+Nov 20 05:04:42 kdc-server krb5kdc[14](info): AS_REQ (1 etypes {18}) 10.5.0.2: ISSUE: authtime 1732079082, etypes {rep=18 tkt=18 ses=18}, hadoop/cluster@EXAMPLE.COM for krbtgt/EXAMPLE.COM@EXAMPLE.COM
+Nov 20 05:05:15 kdc-server krb5kdc[14](info): closing down fd 12
